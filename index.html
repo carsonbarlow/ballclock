@@ -6,8 +6,9 @@
 <body>
   <div data-ng-app="ballclockApp">
     <div data-ng-controller="bcController as bc">
-      <p>Number of balls: <input type="text" ng-model="bc.ball_count"></p>
-      <p>Number of minutes: <input type="text" ng-model="bc.minute_count"></p>
+      <p>Number of balls: <input type="number" min="27" max="127" ng-model="bc.ball_count"></p>
+      <p>Number of minutes: <input type="number" ng-model="bc.minute_count"></p>
+      <button ng-click="do_work(bc, bc.ball_count, bc.minute_count)">Calculate</button>
       <p>Minimum number of balls: {{(4+11+11+1)}}</p>
       <p>One 12 Cycle: {{bc.queue_after_12_hours}}</p>
       <p>Days Until Original Order: {{bc.days_until_original_order}}</p>
