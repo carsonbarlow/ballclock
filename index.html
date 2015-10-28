@@ -12,7 +12,14 @@
       <p>Minimum number of balls: {{(4+11+11+1)}}</p>
       <p>One 12 Cycle: {{bc.queue_after_12_hours}}</p>
       <p>Days Until Original Order: {{bc.days_until_original_order}}</p>
-      <p>Current State of Ballclock: {{bc.current_state}}</p>
+      <p>Current State of Ballclock: 
+        <ul>
+          <li>One Minute: {{bc.current_minute}}</li>
+          <li>Five Minute: {{bc.current_five_minute}}</li>
+          <li>Hour: {{bc.current_hour}}</li>
+          <li>Queue: {{bc.current_queue}}</li>
+        </ul>
+      </p>
     </div>
   </div>
 
