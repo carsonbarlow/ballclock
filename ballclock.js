@@ -47,7 +47,7 @@ var Clock = function(balls){;
   }
 
   this.do_upto_12_hours = function(minutes){
-    if (!minutes){
+    if (typeof minutes == 'undefined'){
       minutes = Infinity;
     }
 
@@ -89,8 +89,8 @@ var Clock = function(balls){;
     for (var i = 0; i < queue.length; i++){
       new_queue.push(queue[i+this._12_hour_difference[i]]);
     }
-    // console.log(new_queue);
     queue = new_queue;
+    this.queue = queue;
   };
 
   this.check_original_order = function(){
